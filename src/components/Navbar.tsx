@@ -35,6 +35,9 @@ const Navbar = () => {
             <Link to="/promotional" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Promotional
             </Link>
+            <Link to="/policies" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
+              Policies
+            </Link>
             <Button variant="default" className="bg-unt-green hover:bg-unt-darkgreen ml-4 transition-colors duration-300">
               Request Estimate
             </Button>
@@ -83,6 +86,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Promotional
+            </Link>
+            <Link 
+              to="/policies" 
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Policies
             </Link>
             <Button 
               variant="default" 

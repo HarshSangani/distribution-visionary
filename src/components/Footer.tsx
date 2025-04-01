@@ -39,6 +39,11 @@ const Footer = () => {
                   Promotional Products
                 </Link>
               </li>
+              <li>
+                <Link to="/policies" className="text-gray-600 hover:text-unt-green transition-colors">
+                  Policies & Guidelines
+                </Link>
+              </li>
             </ul>
           </div>
           
