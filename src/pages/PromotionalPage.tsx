@@ -1,8 +1,8 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import CallToAction from "@/components/CallToAction";
+import ExtendedServicesMessage from "@/components/ExtendedServicesMessage";
 
 const PromotionalPage = () => {
   return (
@@ -263,6 +263,10 @@ const PromotionalPage = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+            
+            <div className="mt-12">
+              <ExtendedServicesMessage contactLink="#" />
             </div>
           </div>
         </section>

@@ -1,8 +1,8 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import CallToAction from "@/components/CallToAction";
+import ExtendedServicesMessage from "@/components/ExtendedServicesMessage";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const PrintingPage = () => {
@@ -165,6 +165,10 @@ const PrintingPage = () => {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+            
+            <div className="mt-12">
+              <ExtendedServicesMessage contactLink="#" />
             </div>
           </div>
         </section>
