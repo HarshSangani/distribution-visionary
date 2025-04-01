@@ -33,7 +33,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 150 100% 26%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -92,10 +92,11 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-medium tracking-tight;
   }
 
   h1 {
@@ -116,5 +117,21 @@
 
   p {
     @apply leading-relaxed;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-[1.02];
   }
 }

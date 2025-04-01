@@ -8,7 +8,7 @@ interface ExtendedServicesMessageProps {
 
 const ExtendedServicesMessage = ({ contactLink = "#" }: ExtendedServicesMessageProps) => {
   return (
-    <div className="bg-gradient-to-r from-white to-unt-green/5 rounded-lg p-8 shadow-sm backdrop-blur-sm border-l-4 border-unt-green animate-fade-in">
+    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-unt-green/10 hover:border-unt-green/20 transition-all duration-300">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div className="space-y-3 max-w-2xl">
           <h4 className="text-xl font-medium text-unt-green">Looking for something else?</h4>

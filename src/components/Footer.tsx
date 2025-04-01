@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 pt-10 pb-8">
+    <footer className="bg-gray-50 pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -11,7 +11,7 @@ const Footer = () => {
             <p className="text-gray-600 mb-4">
               Your reliable partner at UNT for all printing, mailing, and promotional needs.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} University of North Texas
             </p>
           </div>
@@ -47,7 +47,7 @@ const Footer = () => {
             <address className="not-italic text-gray-600 space-y-2">
               <p>1155 Union Circle #311400</p>
               <p>Denton, TX 76203-5017</p>
-              <p>Phone: (940) 565-2005</p>
+              <p>Phone: <a href="tel:9405652005" className="hover:text-unt-green transition-colors">(940) 565-2005</a></p>
               <p>Email: <a href="mailto:printing@unt.edu" className="hover:text-unt-green transition-colors">printing@unt.edu</a></p>
             </address>
           </div>

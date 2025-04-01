@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -22,20 +22,20 @@ const Navbar = () => {
           </div>
           
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium">
+          <div className="hidden md:flex items-center space-x-6">
+            <Link to="/" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Home
             </Link>
-            <Link to="/printing" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium">
+            <Link to="/printing" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Printing
             </Link>
-            <Link to="/mailing" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium">
+            <Link to="/mailing" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Mailing
             </Link>
-            <Link to="/promotional" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium">
+            <Link to="/promotional" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Promotional
             </Link>
-            <Button variant="default" className="bg-unt-green hover:bg-unt-darkgreen ml-4">
+            <Button variant="default" className="bg-unt-green hover:bg-unt-darkgreen ml-4 transition-colors duration-300">
               Request Estimate
             </Button>
           </div>
@@ -58,35 +58,35 @@ const Navbar = () => {
           <div className="flex flex-col space-y-2">
             <Link 
               to="/" 
-              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/printing" 
-              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Printing
             </Link>
             <Link 
               to="/mailing" 
-              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Mailing
             </Link>
             <Link 
               to="/promotional" 
-              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Promotional
             </Link>
             <Button 
               variant="default" 
-              className="bg-unt-green hover:bg-unt-darkgreen w-full mt-4"
+              className="bg-unt-green hover:bg-unt-darkgreen w-full mt-4 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Request Estimate
