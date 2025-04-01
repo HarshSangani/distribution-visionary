@@ -10,6 +10,7 @@ import MailingPage from "./pages/MailingPage";
 import PromotionalPage from "./pages/PromotionalPage";
 import PolicyPage from "./pages/PolicyPage";
 import NotFound from "./pages/NotFound";
+import EagleImagesPage from "./pages/EagleImagesPage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/printing" element={<PrintingPage />} />
+          <Route path="/eagle-images" element={<EagleImagesPage />} />
           <Route path="/mailing" element={<MailingPage />} />
           <Route path="/promotional" element={<PromotionalPage />} />
           <Route path="/policies" element={<PolicyPage />} />
