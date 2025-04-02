@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MenuIcon, X, ChevronRight } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,52 +12,31 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="flex items-center" onClick={() => isMenuOpen && setIsMenuOpen(false)}>
-            <span className="text-unt-green font-bold text-xl">UNT Printing & Distribution</span>
-          </Link>
+    <nav className="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-white/95">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center">
+              <span className="text-unt-green font-bold text-xl">UNT Printing & Distribution</span>
+            </Link>
+          </div>
           
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-1">
-            <Link 
-              to="/" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 font-medium"
-            >
+          <div className="hidden md:flex items-center space-x-6">
+            <Link to="/" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Home
             </Link>
-            <Link 
-              to="/printing" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 font-medium"
-            >
+            <Link to="/printing" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Printing
             </Link>
-            <Link 
-              to="/mailing" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 font-medium"
-            >
+            <Link to="/mailing" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Mailing
             </Link>
-            <Link 
-              to="/promotional" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 font-medium"
-            >
+            <Link to="/promotional" className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200">
               Promotional
             </Link>
-            <Link 
-              to="/policies" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 font-medium"
-            >
-              Policies
-            </Link>
-            <Button 
-              asChild
-              className="ml-4 bg-unt-green hover:bg-unt-darkgreen transition-colors"
-            >
-              <a href="https://printorders.unt.edu" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                Order Now <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+            <Button variant="default" className="bg-unt-green hover:bg-unt-darkgreen ml-4 transition-colors duration-300">
+              Request Estimate
             </Button>
           </div>
           
@@ -66,10 +45,8 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-unt-green focus:outline-none"
-              aria-expanded={isMenuOpen}
             >
-              <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? <X size={24} aria-hidden="true" /> : <MenuIcon size={24} aria-hidden="true" />}
+              {isMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
             </button>
           </div>
         </div>
@@ -78,53 +55,42 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white pt-2 pb-4 px-4 shadow-lg animate-fade-in">
-          <div className="flex flex-col space-y-1">
+          <div className="flex flex-col space-y-2">
             <Link 
               to="/" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 block font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/printing" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 block font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Printing
             </Link>
             <Link 
               to="/mailing" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 block font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Mailing
             </Link>
             <Link 
               to="/promotional" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 block font-medium"
+              className="text-gray-700 hover:text-unt-green px-3 py-2 rounded-md font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Promotional
             </Link>
-            <Link 
-              to="/policies" 
-              className="px-3 py-2 text-gray-700 hover:text-unt-green transition-colors duration-200 block font-medium"
+            <Button 
+              variant="default" 
+              className="bg-unt-green hover:bg-unt-darkgreen w-full mt-4 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              Policies
-            </Link>
-            <div className="pt-2">
-              <Button 
-                className="w-full bg-unt-green hover:bg-unt-darkgreen transition-colors flex items-center justify-center"
-                onClick={() => setIsMenuOpen(false)}
-                asChild
-              >
-                <a href="https://printorders.unt.edu" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                  Order Now <ChevronRight className="ml-1 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
+              Request Estimate
+            </Button>
           </div>
         </div>
       )}
