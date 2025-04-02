@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import CallToAction from "@/components/CallToAction";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Image, Layers, Check, ChevronRight, Printer } from "lucide-react";
+import { FileText, Image, Layers, Check, ChevronRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
 
