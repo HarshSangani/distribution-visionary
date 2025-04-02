@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -24,9 +23,9 @@ const PromotionalPage = () => {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Promotional Products</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Boost Your Brand with Custom Promotional Products</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our comprehensive range of promotional products offers versatile branding solutions for departments, organizations, and events. From apparel to office essentials, each item can be customized with your logo or message to enhance visibility and create lasting impressions.
+                Promote your business, event, or organization with high-quality promotional products from UNT Printing Services. Our custom items are perfect for increasing brand awareness, employee appreciation, or event giveaways.
               </p>
             </div>
             
