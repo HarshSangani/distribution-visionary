@@ -8,6 +8,7 @@ import { Printer, FileText, Image, Layers, Check, Mail, ChevronRight } from "luc
 import { Separator } from "@/components/ui/separator";
 import ServiceFeature from "@/components/ServiceFeature";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const PrintingPage = () => {
   return (
@@ -34,108 +35,51 @@ const PrintingPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="border border-gray-100 shadow-sm hover:shadow transition-shadow duration-300">
-                <CardHeader className="pb-2">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
-                    <FileText className="h-6 w-6 text-unt-green" />
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-12">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4 text-gray-900">Full-Service Printing Solutions</h3>
+                  <p className="text-gray-700 mb-6">
+                    Our state-of-the-art printing facility offers a wide range of services designed to meet the diverse needs of the UNT community. From basic printing to complex finishing options, we have the expertise and equipment to deliver quality results for any project.
+                  </p>
+                  <p className="text-gray-700 mb-6">
+                    Whether you need materials for academic, administrative, or promotional purposes, our team can help you create professional-quality print products that effectively communicate your message.
+                  </p>
+                  <Button className="bg-unt-green hover:bg-unt-darkgreen">
+                    <Link to="https://printorders.unt.edu" className="text-white">Request a Quote</Link>
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
+                      <FileText className="h-6 w-6 text-unt-green" />
+                    </div>
+                    <h4 className="font-medium mb-2">Print Materials</h4>
+                    <p className="text-sm text-gray-600">Essential printing for all your document needs</p>
                   </div>
-                  <CardTitle className="text-xl font-semibold">Print Materials</CardTitle>
-                  <CardDescription>Essential printing for all your needs</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Business Cards</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Brochures & Flyers</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Posters & Signage</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Event Programs</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Stickers & Labels</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="border border-gray-100 shadow-sm hover:shadow transition-shadow duration-300">
-                <CardHeader className="pb-2">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
-                    <Layers className="h-6 w-6 text-unt-green" />
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
+                      <Layers className="h-6 w-6 text-unt-green" />
+                    </div>
+                    <h4 className="font-medium mb-2">Binding & Finishing</h4>
+                    <p className="text-sm text-gray-600">Professional finishing options</p>
                   </div>
-                  <CardTitle className="text-xl font-semibold">Binding & Finishing</CardTitle>
-                  <CardDescription>Professional finishing options</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Coil & Spiral Binding</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Saddle Stitch</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Perfect Binding</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Lamination</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Cutting & Folding</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="border border-gray-100 shadow-sm hover:shadow transition-shadow duration-300">
-                <CardHeader className="pb-2">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
-                    <Printer className="h-6 w-6 text-unt-green" />
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
+                      <Image className="h-6 w-6 text-unt-green" />
+                    </div>
+                    <h4 className="font-medium mb-2">Design Services</h4>
+                    <p className="text-sm text-gray-600">Creative solutions for your projects</p>
                   </div>
-                  <CardTitle className="text-xl font-semibold">Premium Finishing</CardTitle>
-                  <CardDescription>Professional finishing touches</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Die Cutting</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Embossing</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Foil Stamping</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Spot UV Coating</span>
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <Check className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <span>Edge Framing</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mb-4">
+                      <Printer className="h-6 w-6 text-unt-green" />
+                    </div>
+                    <h4 className="font-medium mb-2">Specialty Printing</h4>
+                    <p className="text-sm text-gray-600">Unique printing techniques</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
