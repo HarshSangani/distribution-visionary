@@ -1,11 +1,12 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import CallToAction from "@/components/CallToAction";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Printer, FileText, Image, Layers, Check } from "lucide-react";
+import { Printer, FileText, Image, Layers, Check, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import ServiceFeature from "@/components/ServiceFeature";
+import { Link } from "react-router-dom";
 
 const PrintingPage = () => {
   return (
@@ -142,156 +143,67 @@ const PrintingPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Eagle Images Services</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Eagle Images Print Center</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Specialized printing services for academic and promotional needs
+                Our design & digital print center providing specialized services for academic and promotional needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mr-4">
-                    <FileText className="h-6 w-6 text-unt-green" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Course Materials</h3>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  High-quality printing for academic materials with benefits including:
-                </p>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Handouts and workbooks with low production costs</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Print-on-demand options to minimize waste</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Custom binding options for durability</span>
-                  </li>
-                </ul>
-              </div>
+              <ServiceFeature
+                icon={FileText}
+                title="Course Materials"
+                description="High-quality printing for academic materials with benefits including low production costs and print-on-demand options to minimize waste."
+              >
+                <Link to="/eagle-images" className="text-unt-green hover:underline flex items-center mt-4 text-sm font-medium">
+                  Learn more about our course materials
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </ServiceFeature>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mr-4">
-                    <Image className="h-6 w-6 text-unt-green" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Large Format Printing</h3>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Advanced printing technology for impactful visual displays:
-                </p>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Poster-size products for presentations and events</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Banners and displays for maximum visibility</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Sidewalk graphics using weather-resistant materials</span>
-                  </li>
-                </ul>
-              </div>
+              <ServiceFeature
+                icon={Image}
+                title="Large Format Printing"
+                description="Advanced printing technology for poster-size products, banners, and sidewalk graphics, perfect for presentations and events."
+              >
+                <Link to="/eagle-images" className="text-unt-green hover:underline flex items-center mt-4 text-sm font-medium">
+                  Explore our large format options
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </ServiceFeature>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mr-4">
-                    <Layers className="h-6 w-6 text-unt-green" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Finishing Services</h3>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Professional finishing touches to enhance your printed materials:
-                </p>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Laminating for durability and protection</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Mounting on foam board or other rigid materials</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Framing and edge framing in various colors</span>
-                  </li>
-                </ul>
-              </div>
+              <ServiceFeature
+                icon={Layers}
+                title="Finishing Services"
+                description="Professional finishing touches including laminating, mounting, framing, and edge framing in various colors."
+              >
+                <Link to="/eagle-images" className="text-unt-green hover:underline flex items-center mt-4 text-sm font-medium">
+                  View finishing service details
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </ServiceFeature>
               
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-unt-green/10 flex items-center justify-center mr-4">
-                    <FileText className="h-6 w-6 text-unt-green" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Paper Sales</h3>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  High-quality paper options for all your printing needs:
-                </p>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Wide variety of weights, finishes, and colors</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>FSC certified options for environmental sustainability</span>
-                  </li>
-                  <li className="flex items-start text-gray-700">
-                    <Check className="h-4 w-4 text-unt-green mr-2 mt-1 flex-shrink-0" />
-                    <span>Recycled content papers to support green initiatives</span>
-                  </li>
-                </ul>
-              </div>
+              <ServiceFeature
+                icon={FileText}
+                title="Paper Sales"
+                description="High-quality papers in a variety of weights, finishes, and colors, including FSC certified and recycled content options."
+              >
+                <Link to="/eagle-images" className="text-unt-green hover:underline flex items-center mt-4 text-sm font-medium">
+                  Browse paper options
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </ServiceFeature>
             </div>
             
-            <div className="mt-12 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h3 className="text-xl font-semibold mb-4">How to Order</h3>
-              <p className="text-gray-600 mb-6">
-                We've made the ordering process simple and straightforward:
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-unt-green mb-2">Online Ordering</h4>
-                  <p className="text-gray-700 mb-4">
-                    Submit your print job through our online system for quick processing:
-                  </p>
-                  <ol className="list-decimal pl-5 space-y-2 text-gray-700">
-                    <li>Visit <a href="https://printorders.unt.edu" className="text-unt-green hover:underline" target="_blank" rel="noopener noreferrer">printorders.unt.edu</a></li>
-                    <li>Create an account or log in</li>
-                    <li>Upload your files and specify requirements</li>
-                    <li>Review and submit your order</li>
-                  </ol>
-                </div>
-                
-                <div>
-                  <h4 className="font-medium text-unt-green mb-2">Email Submission</h4>
-                  <p className="text-gray-700 mb-4">
-                    For special orders or questions, you can email us directly:
-                  </p>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-center">
-                      <Mail className="h-4 w-4 text-unt-green mr-2 flex-shrink-0" />
-                      <a href="mailto:printing@unt.edu" className="text-unt-green hover:underline">printing@unt.edu</a>
-                    </li>
-                    <li>Include detailed specifications and contact information</li>
-                    <li>Attach files under 25MB, or request a file sharing link</li>
-                    <li>Our team will respond within one business day</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="mt-12 text-center">
+              <Link 
+                to="/eagle-images" 
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-unt-green hover:bg-unt-darkgreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-unt-green shadow-sm transition-colors"
+              >
+                Visit Eagle Images Page
+              </Link>
             </div>
           </div>
         </section>
